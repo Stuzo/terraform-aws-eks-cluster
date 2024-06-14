@@ -64,7 +64,7 @@ resource "aws_eks_access_entry" "map" {
   principal_arn     = each.key
   kubernetes_groups = each.value.kubernetes_groups
   type              = each.value.type
-
+  user_name         = each.value.user_name
   tags = module.this.tags
 }
 
